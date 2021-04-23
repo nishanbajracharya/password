@@ -6,35 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <form id="password-form">
-      <div>
-        <input type="range" min="2" max="32" value="8" id="option-length-range" name="option-length-range"> <input type="number" min="2" max="32" value="8" id="option-length" name="option-length" />
+    <form id="password-form" class="password-form">
+      <div class="form-header">Password Generator</div>
+      <div class="form-row">
+        <span class="label">Length</span>
+        <input
+          type="range"
+          class="option-length-range"
+          id="option-length-range"
+          name="option-length-range"
+        />
+        <input
+          type="number"
+          class="option-length"
+          id="option-length"
+          name="option-length"
+        />
       </div>
 
-      <div>
-        <label for="option-lowercase">Lowercase Letters</label>
-        <input type="checkbox" id="option-lowercase" name="option-lowercase" checked/>
+      <div class="form-row">
+        <label for="option-lowercase" class="toggle">
+          <span class="label">Lowercase Letters</span>
+          <input
+            type="checkbox"
+            id="option-lowercase"
+            name="option-lowercase"
+            checked
+          />
+          <span class="switch"></span>
+        </label>
       </div>
 
-      <div>
-        <label for="option-uppercase">Uppercase Letters</label>
-        <input type="checkbox" id="option-uppercase" name="option-uppercase"/>
+      <div class="form-row">
+        <label for="option-uppercase" class="toggle">
+          <span class="label">Uppercase Letters</span>
+          <input
+            type="checkbox"
+            id="option-uppercase"
+            name="option-uppercase"
+          />
+          <span class="switch"></span>
+        </label>
       </div>
 
-      <div>
-        <label for="option-numbers">Numbers</label>
-        <input type="checkbox" id="option-numbers" name="option-numbers"/>
+      <div class="form-row">
+        <label for="option-numbers" class="toggle">
+          <span class="label">Numbers</span>
+          <input type="checkbox" id="option-numbers" name="option-numbers" />
+          <span class="switch"></span>
+        </label>
       </div>
 
-      <div>
-        <label for="option-symbols">Symbols</label>
-        <input type="checkbox" id="option-symbols" name="option-symbols"/>
+      <div class="form-row">
+        <label for="option-symbols" class="toggle">
+          <span class="label">Symbols</span>
+          <input type="checkbox" id="option-symbols" name="option-symbols" />
+          <span class="switch"></span>
+        </label>
       </div>
-      
-      <button id="generate-button">Generate</button>
+
+      <button id="generate-button" class="generate-button">Generate</button>
+
+      <div id="result" class="result"></div>
     </form>
     <script src="src/index.js" type="module"></script>
   </body>
