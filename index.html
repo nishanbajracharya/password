@@ -6,8 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
+    <form id="password-form">
+      <div>
+        <input type="range" min="2" max="32" value="8" id="option-length-range" name="option-length-range"> <input type="number" min="2" max="32" value="8" id="option-length" name="option-length" />
+      </div>
+
+      <div>
+        <label for="option-lowercase">Lowercase Letters</label>
+        <input type="checkbox" id="option-lowercase" name="option-lowercase" checked/>
+      </div>
+
+      <div>
+        <label for="option-uppercase">Uppercase Letters</label>
+        <input type="checkbox" id="option-uppercase" name="option-uppercase"/>
+      </div>
+
+      <div>
+        <label for="option-numbers">Numbers</label>
+        <input type="checkbox" id="option-numbers" name="option-numbers"/>
+      </div>
+
+      <div>
+        <label for="option-symbols">Symbols</label>
+        <input type="checkbox" id="option-symbols" name="option-symbols"/>
+      </div>
+      
+      <button id="generate-button">Generate</button>
+    </form>
     <script src="src/index.js" type="module"></script>
   </body>
 </html>
