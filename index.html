@@ -1,44 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-    <link rel="stylesheet" href="src/styles/style.css" />
-    <link rel="stylesheet" href="src/styles/ui.css" />
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/ui.css">
 
-    <base href="/password/" />
-  </head>
+    <base href="/password/">
+  <link rel="stylesheet" href="/password/src/index.css"></head>
   <body>
     <form id="password-form" class="password-form">
       <div class="form-header">Password Generator</div>
       <div class="form-row">
         <span class="label">Length</span>
-        <input
-          type="range"
-          class="option-length-range"
-          id="option-length-range"
-          name="option-length-range"
-        />
-        <input
-          type="number"
-          class="option-length"
-          id="option-length"
-          name="option-length"
-        />
+        <input type="range" class="option-length-range" id="option-length-range" name="option-length-range">
+        <input type="number" class="option-length" id="option-length" name="option-length">
       </div>
 
       <div class="form-row">
         <label for="option-lowercase" class="toggle">
           <span class="label">Lowercase Letters</span>
-          <input
-            type="checkbox"
-            id="option-lowercase"
-            name="option-lowercase"
-            checked
-          />
+          <input type="checkbox" id="option-lowercase" name="option-lowercase" checked>
           <span class="switch"></span>
         </label>
       </div>
@@ -46,11 +29,7 @@
       <div class="form-row">
         <label for="option-uppercase" class="toggle">
           <span class="label">Uppercase Letters</span>
-          <input
-            type="checkbox"
-            id="option-uppercase"
-            name="option-uppercase"
-          />
+          <input type="checkbox" id="option-uppercase" name="option-uppercase">
           <span class="switch"></span>
         </label>
       </div>
@@ -58,7 +37,7 @@
       <div class="form-row">
         <label for="option-numbers" class="toggle">
           <span class="label">Numbers</span>
-          <input type="checkbox" id="option-numbers" name="option-numbers" />
+          <input type="checkbox" id="option-numbers" name="option-numbers">
           <span class="switch"></span>
         </label>
       </div>
@@ -66,7 +45,7 @@
       <div class="form-row">
         <label for="option-symbols" class="toggle">
           <span class="label">Symbols</span>
-          <input type="checkbox" id="option-symbols" name="option-symbols" />
+          <input type="checkbox" id="option-symbols" name="option-symbols">
           <span class="switch"></span>
         </label>
       </div>
@@ -80,5 +59,6 @@
     </form>
 
     <script src="src/index.js" type="module"></script>
-  </body>
-</html>
+  
+
+</body></html>

@@ -1,21 +1,28 @@
+/* build/src/styles/style.css */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
-
 .password-form {
   margin: 0 auto;
 }
-
-.generate-button, .copy-button {
+.generate-button,
+.copy-button {
   --text-color: #fff;
   --main-color: #59e;
-
   margin: 16px;
   height: 48px;
   width: calc(100% - 32px);
   font-size: 1.25rem;
-
   color: var(--text-color);
   background: var(--main-color);
   border: none;
@@ -24,41 +31,36 @@ body {
   transition: background .25s;
   outline: none;
 }
-
-.generate-button:hover, .copy-button:hover {
+.generate-button:hover,
+.copy-button:hover {
   --main-color: #6af;
   background: var(--main-color);
 }
-
-.generate-button:focus, .copy-button:focus {
+.generate-button:focus,
+.copy-button:focus {
   --main-color: #48d;
   background: var(--main-color);
 }
-
 .result {
   padding: 16px;
   font-size: 1.4rem;
   text-align: center;
   font-family: monospace;
 }
-
 .form-row {
   display: flex;
   padding: 12px 16px;
   align-items: center;
 }
-
 .form-header {
   padding: 16px;
   text-align: center;
   font-size: 1.5rem;
 }
-
 .option-length-range {
   flex: 1;
   margin: 0 16px;
 }
-
 .option-length {
   --base-color: #fafafa;
   --border-color: #ddd;
@@ -74,41 +76,33 @@ body {
   transition: .25s;
   -moz-appearance: textField;
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 .option-length:focus {
   border: 2px solid var(--focus-color);
 }
-
 .result-container {
   display: none;
 }
-
 .result-container.show {
   display: block;
 }
-
 .result-container .result {
   margin: 16px;
   border-radius: 4px;
   border: 2px solid #efefef;
 }
-
 .result-container .copy-button {
   margin: 0 16px;
 }
-
 @media screen and (min-width: 480px) {
   .password-form {
     max-width: 90vw;
   }
 }
-
 @media screen and (min-width: 960px) {
   .password-form {
     max-width: 50vw;

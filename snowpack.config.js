@@ -18,4 +18,7 @@ module.exports = {
   buildOptions: {
     baseUrl: '/password'
   },
+  optimize: {
+    bundle: true
+  }
 };
