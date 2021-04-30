@@ -44,7 +44,7 @@ body {
 
 .form-row {
   display: flex;
-  padding: 16px;
+  padding: 12px 16px;
   align-items: center;
 }
 

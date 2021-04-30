@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import generatePassword from 'password-generator';
 
 const resultContainer = document.getElementById('result-container');
@@ -81,4 +83,12 @@ function copyText(text = '') {
   document.execCommand('copy');
 
   document.body.removeChild(input);
+
+  iziToast.show({
+    theme: 'dark',
+    displayMode: 1,
+    title: 'Copied!',
+    progressBar: false,
+    position: 'bottomCenter',
+  });
 }
