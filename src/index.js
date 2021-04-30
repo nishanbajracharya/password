@@ -1,11 +1,16 @@
 import generatePassword from 'password-generator';
 
+const resultContainer = document.getElementById('result-container');
+const copyButton = document.getElementById('copy-button');
+
 const RANGE_DEFAULT = 12;
 const RANGE_MIN = 2;
 const RANGE_MAX = 32;
 
 const optionRange = document.getElementById('option-length-range');
 const optionLength = document.getElementById('option-length');
+
+let password = '';
 
 function setInputRange(input) {
   input.setAttribute('min', RANGE_MIN);
@@ -56,5 +61,24 @@ form.addEventListener('submit', function (e) {
     length,
   };
 
-  result.textContent = generatePassword(options);
+  password = generatePassword(options);
+  result.textContent = password;
+  resultContainer.classList.add('show');
 });
+
+copyButton.addEventListener('click', function () {
+  password && copyText(password);
+});
+
+function copyText(text = '') {
+  const input = document.createElement('input');
+  document.body.appendChild(input);
+
+  input.value = text;
+
+  input.select();
+
+  document.execCommand('copy');
+
+  document.body.removeChild(input);
+}
