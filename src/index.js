@@ -18,7 +18,7 @@ var iziToast = createCommonjsModule(function(module, exports) {
       module.exports = factory(root);
     }
   })(typeof commonjsGlobal !== "undefined" ? commonjsGlobal : window || commonjsGlobal.window || commonjsGlobal.global, function(root) {
-    var $iziToast = {}, PLUGIN_NAME = "iziToast", BODY = document.querySelector("body"), ISMOBILE = /Mobi/.test(navigator.userAgent) ? true : false, ISCHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor), ISFIREFOX = typeof InstallTrigger !== "undefined", ACCEPTSTOUCH = "ontouchstart" in document.documentElement, POSITIONS = ["bottomRight", "bottomLeft", "bottomCenter", "topRight", "topLeft", "topCenter", "center"], THEMES = {
+    var $iziToast = {}, PLUGIN_NAME = "iziToast", BODY = document.querySelector("body"), ISMOBILE = /Mobi/.test(navigator.userAgent) ? true : false, ISCHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor), ISFIREFOX = typeof InstallTrigger !== "undefined", ACCEPTSTOUCH = "ontouchstart" in document.documentElement, POSITIONS = ["bottomRight", "bottomLeft", "bottomCenter", "topRight", "topLeft", "topCenter", "center"], THEMES2 = {
       info: {
         color: "blue",
         icon: "ico-info"
@@ -271,7 +271,7 @@ var iziToast = createCommonjsModule(function(module, exports) {
       CONFIG = options;
       defaults = extend(defaults, options || {});
     };
-    forEach(THEMES, function(theme, name) {
+    forEach(THEMES2, function(theme, name) {
       $iziToast[name] = function(options) {
         var settings = extend(CONFIG, options || {});
         settings = extend(theme, settings || {});
@@ -991,13 +991,17 @@ var passwordGenerator = generate;
 var password_generator_default = passwordGenerator;
 
 // build/src/index.js
-var resultContainer = document.getElementById("result-container");
-var themeButton = document.getElementById("theme-button");
-var copyButton = document.getElementById("copy-button");
 var RANGE_DEFAULT = 12;
 var RANGE_MIN = 2;
 var RANGE_MAX = 32;
-var DEFAULT_THEME = "light";
+var THEMES = {
+  DARK: "dark",
+  LIGHT: "light"
+};
+var DEFAULT_THEME = THEMES.DARK;
+var resultContainer = document.getElementById("result-container");
+var themeButton = document.getElementById("theme-button");
+var copyButton = document.getElementById("copy-button");
 var optionRange = document.getElementById("option-length-range");
 var optionLength = document.getElementById("option-length");
 var form = document.getElementById("password-form");
@@ -1068,7 +1072,7 @@ function copyText(text = "") {
 }
 themeButton.addEventListener("click", function() {
   const currentTheme = document.body.getAttribute("data-theme") || DEFAULT_THEME;
-  const newTheme = currentTheme === "light" ? "dark" : "light";
+  const newTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
   document.body.setAttribute("data-theme", newTheme);
 });
 //# sourceMappingURL=index.js.map
