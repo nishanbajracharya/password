@@ -14,6 +14,10 @@ const DEFAULT_THEME = 'light';
 const optionRange = document.getElementById('option-length-range');
 const optionLength = document.getElementById('option-length');
 
+const form = document.getElementById('password-form');
+
+const result = document.getElementById('result');
+
 let password = '';
 
 function setInputRange(input) {
@@ -27,6 +31,8 @@ setInputRange(optionLength);
 
 optionRange.addEventListener('input', (e) => {
   optionLength.value = e.target.value;
+
+  resultContainer.classList.contains('show') && submitForm(form);
 });
 
 optionLength.addEventListener('input', (e) => {
@@ -39,17 +45,19 @@ optionLength.addEventListener('input', (e) => {
 
   setTimeout(() => {
     optionLength.value = String(value);
+
+    resultContainer.classList.contains('show') && submitForm(form);
   }, 250);
 });
-
-const form = document.getElementById('password-form');
-
-const result = document.getElementById('result');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const formData = new FormData(e.target);
+  submitForm(form);
+});
+
+function submitForm(form) {
+  const formData = new FormData(form);
 
   const numbers = formData.get('option-numbers') === 'on';
   const lowerCase = formData.get('option-lowercase') === 'on';
@@ -68,7 +76,7 @@ form.addEventListener('submit', function (e) {
   password = generatePassword(options);
   result.textContent = password;
   resultContainer.classList.add('show');
-});
+}
 
 copyButton.addEventListener('click', function () {
   password && copyText(password);
