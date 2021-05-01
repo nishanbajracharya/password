@@ -6,14 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/theme.css" />
     <link rel="stylesheet" href="src/styles/style.css" />
     <link rel="stylesheet" href="src/styles/ui.css" />
 
     <base href="%PUBLIC_URL%" />
+
   </head>
-  <body>
+  <body data-theme="dark">
     <form id="password-form" class="password-form">
-      <div class="form-header">Password Generator</div>
+      <div class="form-header">
+        <span>Password Generator</span>
+        <button type="button" id="theme-button" class="button-icon">
+          <svg
+            class="theme-icon"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="256"
+              cy="256"
+              r="232"
+              stroke="black"
+              stroke-width="48"
+            />
+            <path
+              d="M416 256C416 213.565 399.143 172.869 369.137 142.863C339.131 112.857 298.435 96 256 96C213.565 96 172.869 112.857 142.863 142.863C112.857 172.869 96 213.565 96 256L256 256H416Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
       <div class="form-row">
         <span class="label">Length</span>
         <input
