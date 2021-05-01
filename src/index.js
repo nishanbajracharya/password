@@ -2,14 +2,20 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import generatePassword from 'password-generator';
 
-const resultContainer = document.getElementById('result-container');
-const themeButton = document.getElementById('theme-button');
-const copyButton = document.getElementById('copy-button');
-
 const RANGE_DEFAULT = 12;
 const RANGE_MIN = 2;
 const RANGE_MAX = 32;
-const DEFAULT_THEME = 'light';
+
+const THEMES = {
+  DARK: 'dark',
+  LIGHT: 'light',
+};
+
+const DEFAULT_THEME = THEMES.DARK;
+
+const resultContainer = document.getElementById('result-container');
+const themeButton = document.getElementById('theme-button');
+const copyButton = document.getElementById('copy-button');
 
 const optionRange = document.getElementById('option-length-range');
 const optionLength = document.getElementById('option-length');
@@ -107,7 +113,7 @@ themeButton.addEventListener('click', function () {
   const currentTheme =
     document.body.getAttribute('data-theme') || DEFAULT_THEME;
 
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  const newTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
 
   document.body.setAttribute('data-theme', newTheme);
 });
