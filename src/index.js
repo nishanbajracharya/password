@@ -992,10 +992,12 @@ var password_generator_default = passwordGenerator;
 
 // build/src/index.js
 var resultContainer = document.getElementById("result-container");
+var themeButton = document.getElementById("theme-button");
 var copyButton = document.getElementById("copy-button");
 var RANGE_DEFAULT = 12;
 var RANGE_MIN = 2;
 var RANGE_MAX = 32;
+var DEFAULT_THEME = "light";
 var optionRange = document.getElementById("option-length-range");
 var optionLength = document.getElementById("option-length");
 var password = "";
@@ -1059,4 +1061,9 @@ function copyText(text = "") {
     position: "bottomCenter"
   });
 }
+themeButton.addEventListener("click", function() {
+  const currentTheme = document.body.getAttribute("data-theme") || DEFAULT_THEME;
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  document.body.setAttribute("data-theme", newTheme);
+});
 //# sourceMappingURL=index.js.map

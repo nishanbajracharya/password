@@ -1,0 +1,51 @@
+/* build/src/styles/theme.css */
+body {
+  --body-color: #fff;
+  --body-text-color: #424242;
+  --button-text-color: #fff;
+  --button-main-color: #59e;
+  --button-hover-color: #6af;
+  --button-focus-color: #48d;
+  --input-base-color: #fff;
+  --input-text-color: #424242;
+  --input-border-color: #ddd;
+  --input-focus-color: #6af;
+  --result-border-color: #efefef;
+  --range-base-color: #fff;
+  --range-main-color: #59e;
+  --range-border-color: #59e;
+  --toggle-width: 60px;
+  --toggle-height: 32px;
+  --toggle-spacing: 2px;
+  --toggle-base-color: #fff;
+  --toggle-main-color: #59e;
+  --button-icon-text-color: #424242;
+  --button-icon-base-color: #fff;
+  --button-icon-border-color: #59e;
+  --theme-icon-color: #59e;
+}
+body[data-theme=dark] {
+  --body-color: #212121;
+  --body-text-color: #dadada;
+  --button-text-color: #fff;
+  --button-main-color: #59e;
+  --button-hover-color: #6af;
+  --button-focus-color: #48d;
+  --input-base-color: #212121;
+  --input-text-color: #dadada;
+  --input-border-color: #424242;
+  --input-focus-color: #6af;
+  --result-border-color: #424242;
+  --range-base-color: #212121;
+  --range-main-color: #59e;
+  --range-border-color: #59e;
+  --toggle-width: 60px;
+  --toggle-height: 32px;
+  --toggle-spacing: 2px;
+  --toggle-base-color: #212121;
+  --toggle-main-color: #59e;
+  --button-icon-text-color: #dadada;
+  --button-icon-base-color: #212121;
+  --button-icon-border-color: #59e;
+  --theme-icon-color: #59e;
+}

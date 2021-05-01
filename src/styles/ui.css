@@ -1,10 +1,5 @@
 /* build/src/styles/ui.css */
 .toggle {
-  --toggle-width: 60px;
-  --toggle-height: 32px;
-  --spacing: 2px;
-  --base-color: #fff;
-  --main-color: #59e;
   display: flex;
   align-items: center;
   width: 100%;
@@ -18,12 +13,12 @@
 .toggle input[type=checkbox] + .switch {
   width: var(--toggle-width);
   height: var(--toggle-height);
-  background: var(--base-color);
+  background: var(--toggle-base-color);
   position: relative;
   transition: 0.25s;
   display: inline-block;
   border-radius: calc(var(--toggle-width) / 2);
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--toggle-main-color);
   cursor: pointer;
   user-select: none;
   box-sizing: content-box;
@@ -32,26 +27,23 @@
 .toggle input[type=checkbox] + .switch::after {
   content: "";
   position: absolute;
-  top: var(--spacing);
-  left: var(--spacing);
-  width: calc(var(--toggle-width) / 2 - 2 * var(--spacing));
-  height: calc(var(--toggle-height) - 2 * var(--spacing));
-  background: var(--main-color);
+  top: var(--toggle-spacing);
+  left: var(--toggle-spacing);
+  width: calc(var(--toggle-width) / 2 - 2 * var(--toggle-spacing));
+  height: calc(var(--toggle-height) - 2 * var(--toggle-spacing));
+  background: var(--toggle-main-color);
   transition: 0.25s;
   border-radius: 50%;
 }
 .toggle input[type=checkbox]:checked + .switch {
-  background: var(--main-color);
-  border: 2px solid var(--main-color);
+  background: var(--toggle-main-color);
+  border: 2px solid var(--toggle-main-color);
 }
 .toggle input[type=checkbox]:checked + .switch::after {
-  background: var(--base-color);
-  transform: translateX(calc(100% + 2 * var(--spacing)));
+  background: var(--toggle-base-color);
+  transform: translateX(calc(100% + 2 * var(--toggle-spacing)));
 }
 input[type=range].option-length-range {
-  --base-color: #fff;
-  --main-color: #59e;
-  --border-color: #ccc;
   appearance: none;
   width: 100%;
   cursor: pointer;
@@ -63,28 +55,30 @@ input[type=range].option-length-range::-webkit-slider-runnable-track {
   overflow: hidden;
   border-radius: 10px;
   -webkit-appearance: none;
-  border: 2px solid var(--main-color);
+  background: var(--range-base-color);
+  border: 2px solid var(--range-border-color);
 }
 input[type=range].option-length-range::-moz-range-track {
   width: 100%;
   height: 20px;
   cursor: pointer;
   overflow: hidden;
+  background: var(--range-base-color);
   border-radius: 10px;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--range-border-color);
 }
 input[type=range].option-length-range::-webkit-slider-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   -webkit-appearance: none;
-  background: var(--main-color);
-  border: 2px solid var(--main-color);
+  background: var(--range-main-color);
+  border: 2px solid var(--range-border-color);
 }
 input[type=range].option-length-range::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--main-color);
-  border: 2px solid var(--main-color);
+  background: var(--range-main-color);
+  border: 2px solid var(--range-border-color);
 }
