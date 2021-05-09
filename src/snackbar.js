@@ -23,14 +23,22 @@ function show(message = '', options = {}) {
     barElement.classList.add(snackbarOptions.className);
     barElement.textContent = message;
 
-    timeout = window.setTimeout(hide, snackbarOptions.duration);
+    timeout = window.setTimeout(
+      hide.bind({}, options),
+      snackbarOptions.duration
+    );
   }
 }
 
-function hide() {
+function hide(options = {}) {
+  const snackbarOptions = {
+    ...DEFAULT_OPTIONS,
+    ...options,
+  };
+
   isActive = false;
   clearTimeout(timeout);
-  barElement.classList.remove('show');
+  barElement.classList.remove(snackbarOptions.className);
 }
 
 export { show, hide };
