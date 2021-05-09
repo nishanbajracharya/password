@@ -9,14 +9,14 @@ let timeout;
 
 const DEFAULT_OPTIONS = {
   duration: 2500,
-  className: 'show'
-}
+  className: 'show',
+};
 
 function show(message = '', options = {}) {
   const snackbarOptions = {
     ...DEFAULT_OPTIONS,
-    ...options
-  }
+    ...options,
+  };
 
   if (!isActive) {
     isActive = true;
