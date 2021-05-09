@@ -76,13 +76,17 @@ function show(message = "", options = {}) {
     isActive = true;
     barElement.classList.add(snackbarOptions.className);
     barElement.textContent = message;
-    timeout = window.setTimeout(hide, snackbarOptions.duration);
+    timeout = window.setTimeout(hide.bind({}, options), snackbarOptions.duration);
   }
 }
-function hide() {
+function hide(options = {}) {
+  const snackbarOptions = {
+    ...DEFAULT_OPTIONS2,
+    ...options
+  };
   isActive = false;
   clearTimeout(timeout);
-  barElement.classList.remove("show");
+  barElement.classList.remove(snackbarOptions.className);
 }
 
 // build/src/index.js
