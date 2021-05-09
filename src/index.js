@@ -21,7 +21,7 @@ var {shuffle: shuffle$1} = util;
 var numbers = "0123456789";
 var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var symbols = `_%$@!-`;
+var symbols = `!"#$%&'()*+,-./:;<=>?@[]^_{|}~`;
 var DEFAULT_OPTIONS = {
   numbers: false,
   lowerCase: true,
