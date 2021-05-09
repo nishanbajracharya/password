@@ -23,6 +23,8 @@ body {
   --button-icon-base-color: #fff;
   --button-icon-border-color: #59e;
   --theme-icon-color: #59e;
+  --snackbar-base-color: #32323a;
+  --snackbar-text-color: #fff;
 }
 body[data-theme=dark] {
   --body-color: #212121;
@@ -48,4 +50,6 @@ body[data-theme=dark] {
   --button-icon-base-color: #212121;
   --button-icon-border-color: #59e;
   --theme-icon-color: #59e;
+  --snackbar-base-color: #32323a;
+  --snackbar-text-color: #fff;
 }

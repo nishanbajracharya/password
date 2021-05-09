@@ -1,0 +1,27 @@
+/* build/src/styles/snackbar.css */
+.snackbar {
+  background: var(--snackbar-base-color);
+  color: var(--snackbar-text-color);
+  position: fixed;
+  bottom: -100px;
+  left: 50vw;
+  padding: 12px;
+  transform: translate(-50%, 0);
+  width: 100%;
+  text-align: center;
+  transition: .5s;
+  z-index: 10;
+}
+.snackbar.show {
+  bottom: 0;
+}
+@media screen and (min-width: 480px) {
+  .snackbar {
+    width: auto;
+    padding: 12px 24px;
+    border-radius: 2px;
+  }
+  .snackbar.show {
+    bottom: 20px;
+  }
+}
