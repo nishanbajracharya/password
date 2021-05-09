@@ -1,6 +1,6 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 import generatePassword from 'password-generator';
+
+import * as snackbar from './snackbar';
 
 const RANGE_DEFAULT = 12;
 const RANGE_MIN = 2;
@@ -100,13 +100,7 @@ function copyText(text = '') {
 
   document.body.removeChild(input);
 
-  iziToast.show({
-    theme: 'dark',
-    displayMode: 1,
-    title: 'Copied!',
-    progressBar: false,
-    position: 'bottomCenter',
-  });
+  snackbar.show('Password copied');
 }
 
 themeButton.addEventListener('click', function () {

@@ -36,6 +36,9 @@ body {
 
 
   --theme-icon-color: #59e;
+
+  --snackbar-base-color: #32323a;
+  --snackbar-text-color: #fff;
 }
 
 body[data-theme="dark"] {
@@ -76,4 +79,7 @@ body[data-theme="dark"] {
 
 
   --theme-icon-color: #59e;
+  
+  --snackbar-base-color: #32323a;
+  --snackbar-text-color: #fff;
 }

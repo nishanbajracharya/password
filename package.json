@@ -17,7 +17,6 @@
     "snowpack": "^3.3.5"
   },
   "dependencies": {
-    "izitoast": "^1.4.0",
     "password-generator": "github:nishanbajracharya/password-generator"
   }
 }
